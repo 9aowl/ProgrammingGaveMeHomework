@@ -78,9 +78,13 @@ public class DriveSubsystem extends SubsystemBase {
   }
 
 
-  public void teleop(double speed, double turn){
+  public void set(double speed, double turn){
     m_drivetrain.arcadeDrive(speed, turn);
 
+  }
+
+  public void stop(){
+    m_drivetrain.stopMotor();
   }
   @Override
   public void periodic() {
